@@ -1,0 +1,25 @@
+---
+description: implementing molecular models for BBB prediction
+globs: 
+alwaysApply: false
+---
+# .cursor/rules/deepchem_implementation.mdc
+
+rule "bbb_permeability_model" {
+  description = "Guidelines for implementing BBB permeability models"
+  when = "implementing molecular models for BBB prediction"
+  then = """
+  Follow these implementation patterns for BBB permeability prediction:
+  
+  1. Use the standard model template:
+  @file pipelines/templates/inference/bbb_model_template.py
+  
+  2. Reference the dataset processing approach:
+  @file pipelines/templates/inference/bbb_dataset_processing_template.py
+  
+  3. Implement evaluation using standard metrics:
+  @file pipelines/templates/molecular_model_evaluation.py
+  
+  Ensure your implementation follows these patterns while adapting to your specific requirements.
+  """
+}

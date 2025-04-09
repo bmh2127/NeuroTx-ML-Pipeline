@@ -1,0 +1,22 @@
+---
+description: Creating visualization dashboards
+globs: 
+alwaysApply: false
+---
+# .cursor/rules/visualization.mdc
+
+rule "streamlit_dashboard" {
+  description = "Standard structure for Streamlit dashboards"
+  when = "creating visualization dashboards"
+  then = """
+  Follow the NeuroTx-ML dashboard structure:
+  
+  @file visualization/templates/dashboard_template.py
+  
+  Ensure the dashboard includes:
+  1. Brain visualization section
+  2. Compound properties section
+  3. Interactive filtering options
+  4. Result export functionality
+  """
+}

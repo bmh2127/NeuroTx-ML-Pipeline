@@ -1,0 +1,19 @@
+---
+description: Implementing molecular models
+globs: 
+alwaysApply: false
+---
+# .cursor/rules/deepchem.mdc
+
+rule "deepchem_implementation" {
+  description = "Guidelines for DeepChem model implementation"
+  when = "implementing molecular models"
+  then = """
+  Follow these DeepChem best practices:
+  - Use appropriate featurizers for molecular data
+  - Implement proper train/validation/test splits
+  - Use model.evaluate() for standardized evaluation
+  - Save models with proper versioning
+  - Document hyperparameter choices
+  """
+}

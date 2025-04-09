@@ -1,0 +1,45 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# .cursor/rules/core.mdc
+
+rule "python_best_practices" {
+  description = "Enforce Python best practices for ML development"
+  when = "writing or modifying Python code"
+  then = """
+  Follow these guidelines:
+  - Use type hints for all function parameters and return values
+  - Document functions with docstrings (NumPy style)
+  - Use meaningful variable names that reflect neuroimaging/ML domain
+  - Implement error handling for data processing functions
+  - Follow PEP 8 style guidelines
+  """
+}
+
+rule "metaflow_patterns" {
+  description = "Enforce Metaflow best practices"
+  when = "implementing ML pipelines"
+  then = """
+  Follow these Metaflow patterns:
+  - Use @step decorator for logical pipeline steps
+  - Implement proper error handling in each step
+  - Use self.next() to define clear flow transitions
+  - Leverage conda_base for dependency management
+  - Store intermediate results for reproducibility
+  """
+}
+
+rule "neuroimaging_conventions" {
+  description = "Follow neuroimaging data conventions"
+  when = "processing neuroimaging data"
+  then = """
+  Adhere to these conventions:
+  - Use standard coordinate systems (MNI, Talairach)
+  - Follow BIDS naming conventions for data files
+  - Implement proper validation for neuroimaging data
+  - Document preprocessing steps clearly
+  - Use established libraries (nibabel, nilearn) for core functionality
+  """
+}

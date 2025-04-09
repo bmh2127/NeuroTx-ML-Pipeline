@@ -1,0 +1,19 @@
+---
+description: implementing fMRI preprocessing
+globs: 
+alwaysApply: false
+---
+# .cursor/rules/neuroimaging.mdc
+
+rule "fmri_preprocessing" {
+  description = "Standard fMRI preprocessing steps"
+  when = "implementing fMRI preprocessing"
+  then = """
+  Follow the standard fMRI preprocessing pipeline:
+  
+  @file preprocessing/templates/fmri_preprocessing.py
+  
+  Include all standard steps: motion correction, slice timing correction, 
+  spatial normalization, and smoothing.
+  """
+}
